@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roberto Cárdenas · Arquitecto de Ecosistemas de IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800&family=Saira:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="rc-styles.css">
+<template id="__bundler_thumbnail" data-bg-color="#0d1018">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0d1018"/>
+    <circle cx="600" cy="400" r="230" fill="none" stroke="#3b6fe0" stroke-width="2" opacity="0.35"/>
+    <circle cx="600" cy="400" r="300" fill="none" stroke="#3b6fe0" stroke-width="1" opacity="0.18"/>
+    <text x="600" y="450" font-family="Arial, sans-serif" font-weight="800" font-size="200" fill="#3b6fe0" text-anchor="middle" letter-spacing="-8">RC</text>
+  </svg>
+</template>
+</head>
+<body>
+
+<!-- fondo atmosférico -->
+<div class="bg-field" aria-hidden="true">
+  <span class="bg-orb a"></span>
+  <span class="bg-orb b"></span>
+  <span class="bg-orb c"></span>
+</div>
+<div class="scan" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav">
+  <a class="brand" href="#inicio" style="text-decoration:none">
+    <span class="mark">RC</span>
+    <span class="who"><b>Roberto Cárdenas</b><span>Arquitecto de Ecosistemas de IA</span></span>
+  </a>
+  <nav>
+    <ul class="menu">
+      <li><a href="#ecosistema" data-sec="ecosistema">Ecosistema</a></li>
+      <li><a href="#proyectos" data-sec="proyectos">Proyectos</a></li>
+      <li><a href="#vision" data-sec="vision">Visión</a></li>
+      <li><a href="#impacto" data-sec="impacto">Impacto</a></li>
+      <li><a href="#contacto" data-sec="contacto">Contacto</a></li>
+    </ul>
+  </nav>
+  <a class="btn-explore" href="#ecosistema">Explorar <i data-lucide="arrow-up-right"></i></a>
+  <button class="nav-burger" aria-label="Menú"><i data-lucide="menu"></i></button>
+</header>
+
+<main>
+
+<!-- ============================ 1 · HERO ============================ -->
+<section class="screen hero" id="inicio" data-screen-label="Inicio">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <h1 class="hero-h"><span class="b">El&nbsp;futuro</span><br>ya&nbsp;está<br>operando.</h1>
+      <div class="rule"></div>
+      <p class="sub">Inteligencia Artificial aplicada a medios, experiencias y comunicación.
+        <strong style="color:var(--tx-hi);font-weight:500">Sistemas reales. Resultados reales.</strong></p>
+    </div>
+
+    <div class="hero-gallery reveal d1">
+      <figure class="slot lift has-img">
+        <img class="slot-img" src="assets/img-bibi-bianco.png" alt="Bibi Bianco" loading="lazy" style="object-position:50% 26%">
+        <span class="tint"></span>
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <figcaption class="cap"><div class="t">Bibi Bianco</div><div class="s">Humano Digital</div></figcaption>
+      </figure>
+      <figure class="slot lift has-img">
+        <img class="slot-img" src="assets/img-roberta-cantu.jpeg" alt="Roberta Cantú" loading="lazy" style="object-position:50% 12%">
+        <span class="tint"></span>
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <figcaption class="cap"><div class="t">Roberta Cantú</div><div class="s">Humano Digital</div></figcaption>
+      </figure>
+      <figure class="slot lift center has-img">
+        <img class="slot-img" src="assets/img-conductora-ia.jpeg" alt="Conductora IA" loading="lazy" style="object-position:50% 30%">
+        <span class="tint"></span>
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <span class="tag"><i data-lucide="radio"></i> Broadcast</span>
+        <figcaption class="cap"><div class="t">Conductora IA</div><div class="s">Noticiero en producción</div></figcaption>
+      </figure>
+      <figure class="slot lift has-img">
+        <img class="slot-img" src="assets/img-avatar-itesm.png" alt="Avatar Interactivo ITESM" loading="lazy" style="object-position:50% 40%">
+        <span class="tint"></span>
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <figcaption class="cap"><div class="t">Avatar Interactivo</div><div class="s">ITESM · Proyecto aprobado</div></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="wrap hero-foot reveal d2">
+    <div class="card stats-card lift">
+      <div class="stat"><div class="n">30<span class="u">+</span></div><div class="l">Proyectos<br>de IA</div></div>
+      <div class="stat"><div class="n">5M<span class="u">+</span></div><div class="l">Personas<br>impactadas</div></div>
+      <div class="stat"><div class="n">2</div><div class="l">Botones<br>de plata</div></div>
+      <div class="stat"><div class="n">15<span class="u">+</span></div><div class="l">Años de<br>experiencia</div></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-end">
+      <div class="scroll-hint"><span class="mouse"></span> Scroll para <b>explorar</b></div>
+      <div class="copy" style="text-align:right">Más de 30 implementaciones<br>funcionales de IA</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 2 · ECOSISTEMA ============================ -->
+<section class="screen" id="ecosistema" data-screen-label="Ecosistema">
+  <div class="wrap">
+    <div class="eco-grid">
+      <div class="reveal">
+        <span class="eyebrow">Ecosistema</span>
+        <h2 class="kicker" style="font-size:clamp(2.6rem,4.6vw,4.4rem);margin:18px 0 22px">
+          Un ecosistema,<br><span class="b">no</span> una colección<br>de demos.</h2>
+        <p class="lead">Organizamos la inteligencia artificial en un ecosistema integrado que conecta
+          talento, tecnología y estrategia para transformar medios, educación y comunicación
+          en resultados reales y medibles.</p>
+      </div>
+
+      <div class="orbit reveal d1">
+        <svg class="links" aria-hidden="true"></svg>
+        <div class="core">
+          <span class="m">RC</span>
+          <span class="nm">Roberto Cárdenas</span>
+          <span class="ly">IA Operating Layer</span>
+        </div>
+        <div class="node n1 dot lift"><i data-lucide="user-round" class="ni"></i><div><div class="nt">Humanos Digitales</div><div class="nd">Avatares realistas que informan e interactúan.</div></div></div>
+        <div class="node n2 dot lift"><i data-lucide="radio-tower" class="ni"></i><div><div class="nt">Broadcast Inteligente</div><div class="nd">Noticias y contenidos generados con IA.</div></div></div>
+        <div class="node n3 dot lift"><i data-lucide="graduation-cap" class="ni"></i><div><div class="nt">Transferencia de Conocimiento</div><div class="nd">Capacitación y formación para el futuro.</div></div></div>
+        <div class="node n4 dot lift"><i data-lucide="mouse-pointer-click" class="ni"></i><div><div class="nt">Experiencias Interactivas</div><div class="nd">Interfaces, tótems y entornos inmersivos que conectan.</div></div></div>
+        <div class="node n5 dot lift"><i data-lucide="pen-tool" class="ni"></i><div><div class="nt">Storytelling Generativo</div><div class="nd">Ideas, guiones y visuales que potencian la narrativa.</div></div></div>
+        <div class="node n6 dot lift"><i data-lucide="settings-2" class="ni"></i><div><div class="nt">Automatización de Producción</div><div class="nd">Flujos inteligentes que aceleran y elevan la calidad.</div></div></div>
+      </div>
+    </div>
+
+    <div class="eco-products reveal d2">
+      <div class="pcard lift">
+        <figure class="slot has-img"><video class="slot-img slot-video" src="assets/vid-avatares.webm" muted loop playsinline preload="metadata"></video><span class="tint"></span><span class="corner tl"></span><span class="corner br"></span></figure>
+        <div class="pmeta"><div class="pt"><b>Avatares / Presentadoras IA</b><span class="plus"><i data-lucide="plus"></i></span></div><div class="pd">Humanos digitales hiperrealistas.</div></div>
+      </div>
+      <div class="pcard lift">
+        <figure class="slot has-img"><video class="slot-img slot-video" src="assets/vid-noticiero.webm" muted loop playsinline preload="metadata"></video><span class="tint"></span><span class="corner tl"></span><span class="corner br"></span></figure>
+        <div class="pmeta"><div class="pt"><b>Noticiero Inteligente</b><span class="plus"><i data-lucide="plus"></i></span></div><div class="pd">Producción automatizada con IA.</div></div>
+      </div>
+      <div class="pcard lift">
+        <figure class="slot has-img"><video class="slot-img slot-video" src="assets/vid-comercial.webm" muted loop playsinline preload="metadata"></video><span class="tint"></span><span class="corner tl"></span><span class="corner br"></span></figure>
+        <div class="pmeta"><div class="pt"><b>Comercial</b><span class="plus"><i data-lucide="plus"></i></span></div><div class="pd">Publicidad y contenido comercial.</div></div>
+      </div>
+      <div class="pcard lift">
+        <figure class="slot has-img"><video class="slot-img slot-video" src="assets/vid-sistemas.webm" muted loop playsinline preload="metadata"></video><span class="tint"></span><span class="corner tl"></span><span class="corner br"></span></figure>
+        <div class="pmeta"><div class="pt"><b>Sistemas Gráficos / HTML</b><span class="plus"><i data-lucide="plus"></i></span></div><div class="pd">Visualización de datos en tiempo real.</div></div>
+      </div>
+      <div class="pcard lift">
+        <figure class="slot has-img"><video class="slot-img slot-video" src="assets/vid-cine.webm" muted loop playsinline preload="metadata"></video><span class="tint"></span><span class="corner tl"></span><span class="corner br"></span></figure>
+        <div class="pmeta"><div class="pt"><b>Cine &amp; Storyboards IA</b><span class="plus"><i data-lucide="plus"></i></span></div><div class="pd">Previsualización y concept art.</div></div>
+      </div>
+      <div class="pcard lift">
+        <figure class="slot has-img"><video class="slot-img slot-video" src="assets/vid-capacitacion.webm" muted loop playsinline preload="metadata"></video><span class="tint"></span><span class="corner tl"></span><span class="corner br"></span></figure>
+        <div class="pmeta"><div class="pt"><b>Capacitación TEC</b><span class="plus"><i data-lucide="plus"></i></span></div><div class="pd">Formación en IA aplicada.</div></div>
+      </div>
+    </div>
+
+    <div class="stat-bar reveal d3">
+      <div class="cell"><i data-lucide="scan-eye" class="ic" width="34" height="34"></i><div><div class="n">30<span class="u">+</span></div></div><div class="tx"><b>Implementaciones reales</b><span>En medios, educación y comunicación.</span></div></div>
+      <div class="cell"><i data-lucide="box" class="ic" width="34" height="34"></i><div><div class="n">15<span class="u">+</span></div></div><div class="tx"><b>Productos</b><span>Activos y en evolución constante.</span></div></div>
+      <div class="cell"><i data-lucide="users-round" class="ic" width="34" height="34"></i><div><div class="n">5M<span class="u">+</span></div></div><div class="tx"><b>Personas impactadas</b><span>Con experiencias significativas.</span></div></div>
+      <div class="cell"><i data-lucide="eye" class="ic" width="34" height="34"></i><div><div class="n">100<span class="u">%</span></div></div><div class="tx"><b>Visión estratégica</b><span>Diseñada para escalar y perdurar.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 3 · PROYECTOS ============================ -->
+<section class="screen" id="proyectos" data-screen-label="Proyectos">
+  <div class="wrap">
+    <div class="proj-head">
+      <div class="reveal">
+        <span class="eyebrow">Proyectos</span>
+        <h2 class="kicker" style="font-size:clamp(2.6rem,4.4vw,4.2rem);margin-top:16px">
+          <span class="b">Proyectos</span><br>casos reales.<br>sistemas reales.</h2>
+      </div>
+      <p class="lead reveal d1" style="max-width:54ch">Una selección de implementaciones, prototipos y productos
+        desarrollados con inteligencia artificial para medios, comunicación, educación, automatización
+        y experiencias digitales.</p>
+    </div>
+
+    <div class="bento reveal d1">
+      <div class="it feature lift play-card" data-src="assets/pv-conductora.webm" data-title="Conductora IA" data-sub="Noticiero en producción · Implementación real">
+        <figure class="slot has-img"><video class="slot-img" src="assets/pv-conductora.webm" muted playsinline preload="metadata" style="object-position:50% 28%"></video><span class="tint"></span>
+          <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          <span class="tag"><i data-lucide="radio"></i> Broadcast</span>
+          <div class="cap"><div class="t" style="font-family:var(--display);font-size:1.8rem;text-transform:uppercase">Conductora IA</div><div class="s">Noticiero en producción · Implementación real</div></div>
+          <span class="go"><i data-lucide="play"></i></span></figure>
+      </div>
+      <div class="it tall lift play-card" data-src="assets/pv-bibi.webm" data-title="Bibi Bianco" data-sub="Conductora IA · Pronóstico del tiempo">
+        <figure class="slot has-img"><video class="slot-img" src="assets/pv-bibi.webm" muted playsinline preload="metadata" style="object-position:50% 22%"></video><span class="tint"></span>
+          <span class="corner tl"></span><span class="corner br"></span>
+          <span class="tag"><i data-lucide="badge-check"></i> Real</span>
+          <div class="cap"><div class="t">Bibi Bianco</div><div class="s">Conductora IA · Pronóstico del tiempo</div></div>
+          <span class="go"><i data-lucide="play"></i></span></figure>
+      </div>
+      <div class="it tall lift play-card" data-src="assets/pv-roberta.webm" data-title="Roberta Cantú" data-sub="Conductora IA · Meteorología">
+        <figure class="slot has-img"><video class="slot-img" src="assets/pv-roberta.webm" muted playsinline preload="metadata" style="object-position:50% 18%"></video><span class="tint"></span>
+          <span class="corner tl"></span><span class="corner br"></span>
+          <span class="tag"><i data-lucide="badge-check"></i> Real</span>
+          <div class="cap"><div class="t">Roberta Cantú</div><div class="s">Conductora IA · Meteorología</div></div>
+          <span class="go"><i data-lucide="play"></i></span></figure>
+      </div>
+
+      <div class="it q lift play-card" data-src="assets/pv-avatar.webm" data-title="Avatar Interactivo ITESM" data-sub="Proyecto aprobado">
+        <figure class="slot has-img"><video class="slot-img" src="assets/pv-avatar.webm" muted playsinline preload="metadata"></video><span class="tint"></span>
+          <span class="corner tl"></span><span class="corner br"></span>
+          <span class="tag"><i data-lucide="check-circle-2"></i> Aprobado</span>
+          <div class="cap"><div class="t">Avatar Interactivo ITESM</div><div class="s">Proyecto aprobado</div></div>
+          <span class="go"><i data-lucide="play"></i></span></figure>
+      </div>
+      <div class="it q lift play-card" data-src="assets/pv-sistemas.webm" data-title="Sistemas Gráficos / HTML" data-sub="Herramientas internas y automatización visual">
+        <figure class="slot has-img"><video class="slot-img" src="assets/pv-sistemas.webm" muted playsinline preload="metadata"></video><span class="tint"></span>
+          <span class="corner tl"></span><span class="corner br"></span>
+          <span class="tag"><i data-lucide="badge-check"></i> Real</span>
+          <div class="cap"><div class="t">Sistemas Gráficos / HTML</div><div class="s">Herramientas internas y automatización visual</div></div>
+          <span class="go"><i data-lucide="play"></i></span></figure>
+      </div>
+      <div class="it q lift play-card" data-src="assets/pv-storyboards.webm" data-title="Storyboards &amp; Cine IA" data-sub="Narrativa, previsualización y concepto">
+        <figure class="slot has-img"><video class="slot-img" src="assets/pv-storyboards.webm" muted playsinline preload="metadata"></video><span class="tint"></span>
+          <span class="corner tl"></span><span class="corner br"></span>
+          <span class="tag"><i data-lucide="badge-check"></i> Real</span>
+          <div class="cap"><div class="t">Storyboards &amp; Cine IA</div><div class="s">Narrativa, previsualización y concepto</div></div>
+          <span class="go"><i data-lucide="play"></i></span></figure>
+      </div>
+      <div class="it q lift play-card" data-src="assets/pv-campanas.webm" data-title="Campañas &amp; Contenido" data-sub="Publicidad y comunicación">
+        <figure class="slot has-img"><video class="slot-img" src="assets/pv-campanas.webm" muted playsinline preload="metadata"></video><span class="tint"></span>
+          <span class="corner tl"></span><span class="corner br"></span>
+          <span class="tag"><i data-lucide="badge-check"></i> Real</span>
+          <div class="cap"><div class="t">Campañas &amp; Contenido</div><div class="s">Publicidad y comunicación</div></div>
+          <span class="go"><i data-lucide="play"></i></span></figure>
+      </div>
+    </div>
+
+    <div class="stat-bar reveal d2" style="margin-top:30px">
+      <div class="cell"><i data-lucide="scan-eye" class="ic" width="32" height="32"></i><div><div class="n">30<span class="u">+</span></div></div><div class="tx"><b>Implementaciones</b><span>En medios, educación y comunicación.</span></div></div>
+      <div class="cell"><i data-lucide="box" class="ic" width="32" height="32"></i><div><div class="n">15<span class="u">+</span></div></div><div class="tx"><b>Productos</b><span>Activos y en evolución constante.</span></div></div>
+      <div class="cell"><i data-lucide="users-round" class="ic" width="32" height="32"></i><div><div class="n">5M<span class="u">+</span></div></div><div class="tx"><b>Personas impactadas</b><span>Con experiencias significativas.</span></div></div>
+      <div class="cell"><i data-lucide="brain-circuit" class="ic" width="32" height="32"></i><div class="tx" style="margin-left:-4px"><b>IA aplicada a</b><span>Medios, educación y comunicación. Resultados reales.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 4 · VISIÓN ============================ -->
+<section class="screen" id="vision" data-screen-label="Visión">
+  <div class="wrap tri">
+    <div class="reveal">
+      <span class="eyebrow">Visión</span>
+      <h2 class="kicker" style="font-size:clamp(3rem,5vw,5rem);margin:16px 0 20px">Visión</h2>
+      <p style="font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:1.35rem;line-height:1.15;color:var(--tx-hi)">
+        <span style="color:var(--blue-bright)">La IA no es una herramienta.</span><br>Es una nueva capa operativa.</p>
+      <div class="rule"></div>
+      <p class="lead">Mi visión es construir la infraestructura inteligente que permitirá a los medios,
+        universidades y organizaciones operar, comunicarse y crecer en la próxima década.</p>
+      <a class="cta" href="#impacto" style="margin-top:26px">Así será el futuro <i data-lucide="arrow-up-right"></i></a>
+    </div>
+
+    <div class="stage reveal d1">
+      <span class="ring"></span>
+      <figure class="slot"><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <div class="ph"><i data-lucide="layout-dashboard" class="ico"></i><span class="fn">img-sala-control-2027.jpg</span><span class="hint">command center · muros de datos</span></div>
+      </figure>
+      <div class="overlay">
+        <div class="big-year">2027</div>
+        <div class="big-sub">Ecosistemas Inteligentes</div>
+        <div class="big-tag">Transformar para conectar, automatizar y crecer</div>
+        <p class="big-desc">Pasamos de operaciones tradicionales a ecosistemas inteligentes donde la comunicación,
+          la automatización y la interacción digital se unifican para generar impacto real y sostenido,
+          impulsados por IA.</p>
+        <a class="cta" href="#contacto">Conoce la visión <i data-lucide="arrow-up-right"></i></a>
+      </div>
+    </div>
+
+    <div class="feed reveal d2">
+      <h4>Lo que viene</h4>
+      <div class="row"><i data-lucide="clapperboard" class="ic"></i><div><b>Medios Aumentados</b><span>Contenidos generados y presentados con IA.</span></div></div>
+      <div class="row"><i data-lucide="scan-face" class="ic"></i><div><b>Talento Digital</b><span>Humanos digitales como nuevos miembros del equipo.</span></div></div>
+      <div class="row"><i data-lucide="workflow" class="ic"></i><div><b>Producción Automatizada</b><span>Menos tareas operativas, más creación.</span></div></div>
+      <div class="row"><i data-lucide="box" class="ic"></i><div><b>Nuevos Productos</b><span>Servicios y experiencias que hoy no existen.</span></div></div>
+      <div class="row"><i data-lucide="graduation-cap" class="ic"></i><div><b>Educación y Capacitación</b><span>Formar talento para liderar esta nueva era.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 5 · IMPACTO ============================ -->
+<section class="screen" id="impacto" data-screen-label="Impacto">
+  <div class="wrap">
+    <div class="tri">
+      <div class="reveal">
+        <span class="eyebrow">Impacto</span>
+        <h2 class="kicker" style="font-size:clamp(3rem,5vw,5rem);margin:16px 0 20px">Impacto</h2>
+        <p style="font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:1.3rem;line-height:1.15;color:var(--tx-hi)">
+          <span style="color:var(--blue-bright)">La IA no solo innova.</span><br>Genera resultados reales.</p>
+        <div class="rule"></div>
+        <p class="lead">El impacto de nuestras implementaciones se refleja en el alcance, la eficiencia,
+          la capacitación, la escalabilidad y en las nuevas posibilidades de comunicación que hoy son una
+          ventaja competitiva real.</p>
+        <a class="cta" href="#contacto" style="margin-top:26px">Ver resultados <i data-lucide="arrow-up-right"></i></a>
+      </div>
+
+      <div class="imp-panel reveal d1">
+        <div class="imp-hero"><div class="big">30<span style="color:var(--blue)">+</span></div><div class="lbl">Implementaciones Funcionales</div></div>
+        <div class="imp-tiles">
+          <div class="tile"><i data-lucide="users-round" class="ic"></i><div><div class="n">5M<span class="u">+</span></div><b>Personas impactadas</b></div></div>
+          <div class="tile"><i data-lucide="calendar-check" class="ic"></i><div><div class="n">15<span class="u">+</span></div><b>Años de experiencia</b></div></div>
+          <div class="tile"><i data-lucide="award" class="ic"></i><div><div class="n">2</div><b>Botones de plata</b></div></div>
+          <div class="tile"><i data-lucide="graduation-cap" class="ic"></i><div><b>Capacitación TEC</b></div></div>
+          <div class="tile"><i data-lucide="clipboard-check" class="ic"></i><div><b>Proyectos aprobados</b></div></div>
+          <div class="tile"><i data-lucide="box" class="ic"></i><div><b>Sistemas reales</b></div></div>
+        </div>
+        <p class="imp-note">Transformamos la comunicación con soluciones de IA que generan
+          <span class="b">valor medible</span>: aceleramos la producción, habilitamos nuevos formatos,
+          fortalecemos la presencia institucional y llevamos la IA a la práctica real.</p>
+        <div style="text-align:center;position:relative"><a class="cta" href="#contacto">Conoce el impacto <i data-lucide="arrow-up-right"></i></a></div>
+      </div>
+
+      <div class="feed reveal d2">
+        <h4>Resultados</h4>
+        <div class="row"><i data-lucide="gauge" class="ic"></i><div><b>Más velocidad</b><span>Procesos y contenidos producidos con mayor agilidad.</span></div></div>
+        <div class="row"><i data-lucide="trending-up" class="ic"></i><div><b>Más escalabilidad</b><span>Sistemas capaces de crecer sin multiplicar la operación.</span></div></div>
+        <div class="row"><i data-lucide="eye" class="ic"></i><div><b>Más visibilidad</b><span>Nuevos formatos, presencia innovadora y mayor alcance.</span></div></div>
+        <div class="row"><i data-lucide="graduation-cap" class="ic"></i><div><b>Más capacitación</b><span>Transferencia de conocimiento para equipos e instituciones.</span></div></div>
+        <div class="row"><i data-lucide="star" class="ic"></i><div><b>Más oportunidades</b><span>Nuevos productos, servicios y experiencias impulsadas por IA.</span></div></div>
+      </div>
+    </div>
+
+    <div class="imp-foot reveal d2">
+      <div class="col"><i data-lucide="clapperboard" class="ic"></i><div><b>Medios</b><span>Comunicación con impacto real.</span></div></div>
+      <div class="col"><i data-lucide="graduation-cap" class="ic"></i><div><b>Educación</b><span>Aprendizaje y formación inteligente.</span></div></div>
+      <div class="col"><i data-lucide="megaphone" class="ic"></i><div><b>Comunicación</b><span>Mensajes que conectan y transforman.</span></div></div>
+      <div class="col"><i data-lucide="settings-2" class="ic"></i><div><b>Automatización</b><span>Procesos más eficientes e inteligentes.</span></div></div>
+      <div class="col"><i data-lucide="glasses" class="ic"></i><div><b>Experiencias digitales</b><span>Nuevos formatos, nuevas posibilidades.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 6 · CONTACTO ============================ -->
+<section class="screen" id="contacto" data-screen-label="Contacto">
+  <div class="wrap">
+    <div class="ct-grid">
+      <div class="reveal">
+        <span class="eyebrow">Contacto</span>
+        <h2 class="kicker" style="font-size:clamp(2.6rem,4.6vw,4.2rem);margin:16px 0 20px">
+          Hablemos.<br><span class="b">Construyamos<br>el futuro juntos.</span></h2>
+        <p class="lead">Si buscas crear ecosistemas inteligentes que transformen la forma en que tu organización
+          comunica, produce, enseña y conecta, estoy listo para diseñarlo contigo.</p>
+
+        <div class="ct-channels">
+          <a class="card ct-ch lift" href="mailto:robecardenas@gmail.com" style="text-decoration:none">
+            <span class="ic"><i data-lucide="mail"></i></span>
+            <div><div class="l">Email</div><div class="v">robecardenas@gmail.com</div></div>
+          </a>
+          <a class="card ct-ch lift" href="https://wa.me/528126683279" style="text-decoration:none">
+            <span class="ic"><i data-lucide="message-circle"></i></span>
+            <div><div class="l">WhatsApp</div><div class="v">812 668 3279</div></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal d1">
+        <div class="ct-profile">
+          <figure class="slot lift has-img"><img class="slot-img" src="assets/img-roberto.png" alt="Roberto Cárdenas" loading="lazy" style="object-position:50% 22%"><span class="tint"></span><span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+          </figure>
+          <div>
+            <div class="pname">Roberto Cárdenas</div>
+            <div class="prole">Arquitecto de Ecosistemas de IA</div>
+            <p class="pbio">Diseño e implemento soluciones de inteligencia artificial aplicadas a medios,
+              educación y comunicación para crear ecosistemas escalables, eficientes y con impacto real.</p>
+            <div class="ct-values">
+              <div class="vv"><i data-lucide="brain-circuit" class="ic"></i><b>Estrategia inteligente</b></div>
+              <div class="vv"><i data-lucide="lightbulb" class="ic"></i><b>Innovación aplicada</b></div>
+              <div class="vv"><i data-lucide="settings-2" class="ic"></i><b>Automatización creativa</b></div>
+              <div class="vv"><i data-lucide="target" class="ic"></i><b>Impacto medible</b></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="help">
+          <h4>¿Cómo puedo ayudar?</h4>
+          <div class="help-grid">
+            <div class="hh"><i data-lucide="brain-circuit" class="ic"></i><span>Consultoría estratégica en IA para comunicación y educación.</span></div>
+            <div class="hh"><i data-lucide="settings-2" class="ic"></i><span>Automatización de producción y flujos de trabajo.</span></div>
+            <div class="hh"><i data-lucide="graduation-cap" class="ic"></i><span>Capacitación y transferencia de conocimiento.</span></div>
+            <div class="hh"><i data-lucide="scan-face" class="ic"></i><span>Desarrollo de humanos digitales y experiencias interactivas.</span></div>
+            <div class="hh"><i data-lucide="monitor-play" class="ic"></i><span>Implementación de sistemas de broadcast inteligente.</span></div>
+            <div class="hh"><i data-lucide="box" class="ic"></i><span>Diseño de productos y servicios basados en IA.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-foot reveal d2">
+      <div class="quote">
+        <span class="q">“</span>
+        <p>No se trata de usar IA.<br><span class="b">Se trata de crear ecosistemas que la hagan trabajar para nosotros.</span></p>
+      </div>
+      <div class="socials">
+        <a class="sg" href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a class="sg" href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+        <a class="sg" href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+      </div>
+      <div class="copy">© 2026 Roberto Cárdenas<br>Arquitecto de Ecosistemas de IA</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ REPRODUCTOR MODAL ============================ -->
+<div class="vplayer" id="vplayer" aria-hidden="true">
+  <div class="vp-backdrop" data-close></div>
+  <div class="vp-shell" role="dialog" aria-modal="true" aria-label="Reproductor de proyecto">
+    <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+    <div class="vp-bar">
+      <div class="vp-id">
+        <span class="vp-dot"></span>
+        <div><div class="vp-title">—</div><div class="vp-sub">—</div></div>
+      </div>
+      <button class="vp-close" data-close aria-label="Cerrar"><i data-lucide="x"></i></button>
+    </div>
+    <div class="vp-stage">
+      <video class="vp-video" id="vp-video" playsinline preload="auto"></video>
+      <div class="vp-loading"><span></span><span></span><span></span></div>
+      <button class="vp-bigplay" id="vp-bigplay" aria-label="Reproducir"><i data-lucide="play"></i></button>
+    </div>
+    <div class="vp-controls">
+      <button class="vp-btn" id="vp-toggle" aria-label="Reproducir/Pausar"><i data-lucide="play"></i></button>
+      <button class="vp-btn" id="vp-back" aria-label="Retroceder 10s"><i data-lucide="rotate-ccw"></i><b>10</b></button>
+      <button class="vp-btn" id="vp-fwd" aria-label="Adelantar 10s"><i data-lucide="rotate-cw"></i><b>10</b></button>
+      <div class="vp-time" id="vp-cur">0:00</div>
+      <div class="vp-scrub" id="vp-scrub"><div class="vp-buffered" id="vp-buffered"></div><div class="vp-progress" id="vp-progress"><span class="vp-knob"></span></div></div>
+      <div class="vp-time" id="vp-dur">0:00</div>
+      <button class="vp-btn" id="vp-mute" aria-label="Silenciar"><i data-lucide="volume-2"></i></button>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="rc-app.js"></script>
+</body>
+</html>
