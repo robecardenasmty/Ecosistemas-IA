@@ -14,6 +14,23 @@
   else document.addEventListener("DOMContentLoaded", icons);
   window.addEventListener("load", icons);
 
+  /* RC EXPERIENCE · entrada cinematográfica, respetando movimiento reducido */
+  (function(){
+    var intro = document.getElementById("experienceIntro");
+    if (!intro) return;
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var done = false;
+    function finish(){
+      if(done) return;
+      done = true;
+      intro.classList.add("leaving");
+      window.setTimeout(function(){ if(intro.parentNode) intro.parentNode.removeChild(intro); }, 950);
+    }
+    if (reduce){ finish(); return; }
+    window.setTimeout(finish, 2700);
+    document.addEventListener("keydown", function(ev){ if(ev.key === "Escape") finish(); }, {once:true});
+  })();
+
   /* nav sólido al hacer scroll ------------------------------- */
   var nav = document.querySelector(".nav");
   function onScroll(){
