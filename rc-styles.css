@@ -773,3 +773,71 @@ h1.hero-h .b{ color:var(--blue);
 @media (max-width:520px){
   .experience-wordmark{font-size:clamp(1.45rem,6vw,2.2rem);letter-spacing:.2em;padding-left:.2em}
 }
+
+/* ============================================================
+   RC EXPERIENCE · cinematic entry + player motion upgrade
+   ============================================================ */
+.experience-intro{
+  position:fixed; inset:0; z-index:500; display:grid; place-items:center;
+  overflow:hidden; background:
+    radial-gradient(ellipse at 50% 48%, oklch(0.22 0.09 258 / .42), transparent 40%),
+    linear-gradient(135deg,#050812 0%,#080d1b 55%,#03050a 100%);
+  color:#f4f7ff; opacity:1; visibility:visible;
+  transition:opacity .9s cubic-bezier(.22,1,.36,1), visibility .9s;
+}
+.experience-intro::before,.experience-intro::after{
+  content:""; position:absolute; left:50%; top:50%; width:min(62vw,740px); aspect-ratio:1;
+  border:1px solid oklch(.68 .19 258 / .19); border-radius:50%;
+  transform:translate(-50%,-50%) scale(.82); opacity:0;
+  animation:experience-ring 2.6s cubic-bezier(.16,1,.3,1) both;
+}
+.experience-intro::after{ width:min(78vw,930px); animation-delay:.12s; border-color:oklch(.68 .19 258 / .09); }
+.experience-wordmark{
+  position:relative; z-index:1; font-family:var(--display); font-weight:700;
+  font-size:clamp(2.2rem,7vw,6.2rem); letter-spacing:.32em; padding-left:.32em;
+  white-space:nowrap; color:transparent;
+  background:linear-gradient(100deg,#fff 0%,#bcd4ff 28%,#fff 50%,#82adff 72%,#fff 100%);
+  background-size:220% 100%; background-clip:text; -webkit-background-clip:text;
+  text-shadow:0 0 42px oklch(.68 .19 258 / .25);
+  opacity:0; transform:translateY(12px) scale(.985);
+  animation:experience-word 1.4s .28s cubic-bezier(.16,1,.3,1) forwards,
+            experience-shine 1.6s .55s ease-in-out both;
+}
+.experience-intro.leaving{ opacity:0; visibility:hidden; pointer-events:none; }
+@keyframes experience-word{ to{opacity:1;transform:translateY(0) scale(1)} }
+@keyframes experience-shine{ from{background-position:100% 0} to{background-position:0 0} }
+@keyframes experience-ring{ 18%{opacity:0;transform:translate(-50%,-50%) scale(.82)} 55%{opacity:1} to{opacity:.32;transform:translate(-50%,-50%) scale(1.08)} }
+.vp-backdrop{ background:
+  radial-gradient(ellipse at 50% 15%, oklch(.55 .18 258 / .2), transparent 55%),
+  linear-gradient(135deg, oklch(.07 .025 258 / .94), oklch(.1 .035 258 / .9));
+}
+.vp-shell{
+  transform:translateY(26px) scale(.965); transform-style:preserve-3d;
+  transition:transform .55s cubic-bezier(.16,1,.3,1), box-shadow .45s ease;
+}
+.vplayer.open .vp-shell{ transform:translateY(0) scale(1); }
+.vp-shell::before{
+  content:""; position:absolute; inset:0; z-index:5; border-radius:inherit; padding:1px;
+  background:linear-gradient(120deg,transparent 10%,oklch(.72 .18 258 / .65),transparent 35%,transparent 68%,oklch(.72 .18 258 / .28));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude; pointer-events:none;
+  opacity:.7;
+}
+.vp-stage{ isolation:isolate; }
+.vp-stage::after{
+  content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+  background:linear-gradient(180deg,transparent 62%,oklch(.04 .02 258 / .22));
+}
+.vp-video{ transition:filter .5s ease, transform .8s cubic-bezier(.16,1,.3,1); }
+.vplayer:not(.ready) .vp-video{ filter:blur(8px) brightness(.7); transform:scale(1.025); }
+.vplayer.playing .vp-video{ filter:none; transform:scale(1); }
+.vp-btn:focus-visible,.vp-close:focus-visible,.vp-bigplay:focus-visible{
+  outline:2px solid var(--blue-bright); outline-offset:3px;
+}
+.vp-scrub{ transition:height .18s ease, box-shadow .2s ease; }
+.vp-scrub:hover{ box-shadow:0 0 18px var(--glow); }
+@media (prefers-reduced-motion:reduce){
+  .experience-intro,.experience-intro::before,.experience-intro::after,.experience-wordmark{animation:none!important;transition:none!important}
+  .experience-wordmark{opacity:1;transform:none}
+  .vp-shell,.vp-video{transition:none!important}
+}
